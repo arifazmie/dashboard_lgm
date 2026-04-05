@@ -5,10 +5,10 @@ import { Skeleton } from "../components/ui/skeleton";
 import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine
 } from "recharts";
-import { TrendingUp, TrendingDown, Minus, CalendarDays } from "lucide-react";
+import { CalendarDays } from "lucide-react";
 
 export default function Overview() {
-  const { data, loading, error, filteredData, kpis, activeMetrics, toggleMetric, primaryGrade, SMR_GRADES, renderTrend, periodMaxDate, periodMinDate, periodMax, periodMin } = useOutletContext<any>();
+  const { loading, error, filteredData, kpis, activeMetrics, toggleMetric, primaryGrade, SMR_GRADES, renderTrend, periodMaxDate, periodMinDate, periodMax, periodMin } = useOutletContext<any>();
 
   if (error) return <div className="p-6 text-red-500">Error loading data: {error}</div>;
 
